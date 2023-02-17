@@ -21,33 +21,17 @@ import '@ionic/react/css/text-alignment.css';
 import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
-import { initializeApp } from "firebase/app";
 import './theme/variables.css';
 import Favoritos from './pages/Favoritos';
 import Subir from './pages/Subir';
 import Perfil from './pages/Perfil';
 import Mensajes from './pages/Mensajes';
-import { useEffect } from 'react';
 import Registro from './pages/Registro';
 import InicioSesion from './pages/InicioSesion';
 
 setupIonicReact();
 
-const firebaseConfig = {
-  apiKey: "AIzaSyCHpA5h3HLhj6QJCXkJv68UNf_Xj1R7eYM",
-  authDomain: "buypopionic-1.firebaseapp.com",
-  projectId: "buypopionic-1",
-  storageBucket: "buypopionic-1.appspot.com",
-  messagingSenderId: "746368513604",
-  appId: "1:746368513604:web:f6d6f196828890a3c9ee11"
-};
-
-
 const App: React.FC = () => {
-
-  useEffect(() => {
-    const app = initializeApp(firebaseConfig);
-  }, []);
 
   return(
   <IonApp>

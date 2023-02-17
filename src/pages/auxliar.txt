@@ -1,38 +1,26 @@
-import { IonButton, IonContent, IonHeader, IonIcon, IonInput, IonItem, IonLabel, IonLoading, IonPage, IonTitle, IonToolbar, useIonToast } from '@ionic/react';
+import { IonButton, IonCheckbox, IonContent, IonHeader, IonIcon, IonInput, IonItem, IonLabel, IonPage, IonTitle, IonToast, IonToolbar } from '@ionic/react';
 import { lockClosedOutline, lockOpenOutline, logoGoogle } from 'ionicons/icons';
 import { loginUser } from '../firebaseConfig';
 import '../css/Inicio.css';
 import { useState } from 'react';
-import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-
 
 function InicioSesion () {
 
-  const[busy,setBusy]=useState<boolean>(false)
   const[username,setUsername]=useState('');
   const[password,setPassword]=useState('');
 
-  const [toast] = useIonToast()
+  const [showToast, setShowToast] = useState(false);
 
-  const iniciarGoogle=async()=>{
-    try{
-      const auth=getAuth();
-      const googleProvider=new GoogleAuthProvider();
-      await signInWithPopup(auth,googleProvider);
-      toast("Inicio de sesión correcto.",2000)
-    }catch(error){
-      return false
-    }
-  }
-  async function login() {
-    setBusy(true)
-    const res = await loginUser(username, password);
+  const presentToast = (position: 'top' | 'bottom' | 'middle') => {
+    setShowToast(true);
+    setTimeout(() => setShowToast(false), 2000);
+  };
+
+  async function login(){
+    const res=await loginUser(username,password)
     if(!res){
-      toast("El email o contraseña proporcionados no existen.", 3000)
-    } else {
-      toast("Inicio de sesión correcto", 2000)
+      presentToast('bottom');
     }
-    setBusy(false)
   }
 
   return (
@@ -42,7 +30,6 @@ function InicioSesion () {
           <IonTitle>Inicio</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonLoading message="Cargando..." duration={0} isOpen={busy}/>
       <IonContent fullscreen>
         <IonLabel id='texto'>Iniciar sesión</IonLabel>
         <IonItem fill="outline" id='caja'>
@@ -64,8 +51,15 @@ function InicioSesion () {
         <IonIcon slot="end" icon={lockOpenOutline}></IonIcon>
       </IonButton>
 
+      <IonToast
+        isOpen={showToast}
+        onDidDismiss={() => setShowToast(false)}
+        message="El email o contraseña proporcionados no existen."
+        position="bottom"
+        duration={4000}
+      />
 
-      <IonButton color="danger" id='botones' onClick={iniciarGoogle}>
+      <IonButton color="danger" id='botones'>
         Iniciar con Google
         <IonIcon slot="end" icon={logoGoogle}></IonIcon>
       </IonButton>
