@@ -23,12 +23,13 @@ import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
 import { initializeApp } from "firebase/app";
 import './theme/variables.css';
-import Inicio from './pages/Inicio';
 import Favoritos from './pages/Favoritos';
 import Subir from './pages/Subir';
 import Perfil from './pages/Perfil';
 import Mensajes from './pages/Mensajes';
 import { useEffect } from 'react';
+import Registro from './pages/Registro';
+import InicioSesion from './pages/InicioSesion';
 
 setupIonicReact();
 
@@ -53,8 +54,12 @@ const App: React.FC = () => {
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-        <Route exact path="/Inicio">
-            <Inicio/>
+        <Route exact path="/InicioSesion">
+            <InicioSesion/>
+          </Route>
+
+          <Route exact path="/Registro">
+            <Registro/>
           </Route>
 
           <Route exact path="/Perfil">
@@ -75,7 +80,7 @@ const App: React.FC = () => {
 
         </IonRouterOutlet>
         <IonTabBar slot="bottom" color="primary">
-          <IonTabButton tab="Inicio" href="/Inicio">
+          <IonTabButton tab="InicioSesion" href="/InicioSesion">
             <IonIcon icon={homeOutline} />
             <IonLabel>Inicio</IonLabel>
           </IonTabButton>
@@ -99,6 +104,6 @@ const App: React.FC = () => {
       </IonTabs>
     </IonReactRouter>
   </IonApp>
-  );
-}
+);
+  }
 export default App;

@@ -1,0 +1,9 @@
+#text{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.4cm;
+    font-weight: bold;
+    color: #8EC3B0;
+}
