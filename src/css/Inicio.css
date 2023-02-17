@@ -1,0 +1,33 @@
+#texto{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    font-size: 1.1cm;
+    font-weight: bold;
+    color: #8EC3B0;
+}
+
+#email{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#caja{
+    width: 60%;
+    margin: auto;
+    margin-bottom: 20px;
+    border: 1px solid rgb(212, 206, 206);
+    box-shadow: 0 0 1px #595959;
+}
+
+#botones{
+    margin-top: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 1px solid rgb(212, 206, 206);
+    margin-bottom: 20px;
+    width: 60%;
+    margin-left:20%;
+}
+

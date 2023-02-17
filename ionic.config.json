@@ -1,0 +1,7 @@
+{
+  "name": "Buypop",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

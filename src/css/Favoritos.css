@@ -1,0 +1,29 @@
+#imagenes{
+    width: 94%;
+    height: 270px;
+    margin-left: 11px;
+    object-fit: cover;
+    box-shadow: 0 0 8px #595959;
+    margin-top: 10px;
+
+}
+
+#carta{
+    height: 400px;
+    width: 100%;
+    background-color: #d7ded9;
+}
+
+#titulo{
+    
+ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ color: rgb(65, 63, 63);
+ font-size: medium;
+ margin-top: -5px;
+ font-weight: bold;
+}
+
+#categoria{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
