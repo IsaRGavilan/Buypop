@@ -1,25 +1,37 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import '../css/Inicio.css';
 
-function Perfil(){
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonIcon, IonLabel } from '@ionic/react';
+import { lockClosedOutline, logoGoogle } from 'ionicons/icons';
+import '../css/Perfil.css';
+
+function Perfil () {
+
   return (
-    <IonPage>
+    <IonPage  id='contenido'>
       <IonHeader>
         <IonToolbar color="primary">
           <IonTitle>Perfil</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Tab 1</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer name="Tab 1 page" />
+   
+
+      <IonButton id='botones'>
+        Registrarse
+        <IonIcon slot="end" icon={lockClosedOutline}></IonIcon>
+      </IonButton>
+
+      <IonButton color="danger" id='botones'>
+        Registrarse con Google
+        <IonIcon slot="end" icon={logoGoogle}></IonIcon>
+      </IonButton>
+
+      <IonLabel id='text'>¿Ya tienes una cuenta?</IonLabel>
+      
+      
       </IonContent>
     </IonPage>
   );
 };
 
 export default Perfil;
+
