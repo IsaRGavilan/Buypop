@@ -9,7 +9,7 @@ function Inicio () {
     <IonPage  id='contenido'>
       <IonHeader>
         <IonToolbar color="primary">
-          <IonTitle>Inicio</IonTitle>
+          <IonTitle>Inicioquetal</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
