@@ -1,7 +1,7 @@
 import { IonButton, IonCheckbox, IonContent, IonHeader, IonIcon, IonInput, IonItem, IonLabel, IonLoading, IonPage, IonTitle, IonToolbar, useIonToast } from '@ionic/react';
 import { lockClosedOutline, lockOpenOutline, logoGoogle } from 'ionicons/icons';
 import { useState } from 'react';
-import '../css/Perfil.css';
+import '../css/Registro.css';
 import {registerUser} from '../firebaseConfig'
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
@@ -55,7 +55,7 @@ function Registro () {
     <IonPage  id='contenido'>
       <IonHeader>
         <IonToolbar color="primary">
-          <IonTitle>Perfil</IonTitle>
+          <IonTitle>Registro</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>

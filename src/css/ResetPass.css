@@ -1,0 +1,19 @@
+#texto{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 100px;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    font-size: 1.1cm;
+    font-weight: bold;
+    color: #8EC3B0;
+}
+
+#texto2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 0.4cm;
+    margin-left: 60px;
+    display: flex;
+    margin-bottom: 20px;
+
+}

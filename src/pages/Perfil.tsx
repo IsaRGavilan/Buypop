@@ -1,6 +1,5 @@
 
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonIcon, IonLabel } from '@ionic/react';
-import { lockClosedOutline, logoGoogle } from 'ionicons/icons';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonImg } from '@ionic/react';
 import '../css/Perfil.css';
 
 function Perfil () {
@@ -13,19 +12,11 @@ function Perfil () {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-   
+        <IonImg>
+          
+        </IonImg>
+    
 
-      <IonButton id='botones'>
-        Registrarse
-        <IonIcon slot="end" icon={lockClosedOutline}></IonIcon>
-      </IonButton>
-
-      <IonButton color="danger" id='botones'>
-        Registrarse con Google
-        <IonIcon slot="end" icon={logoGoogle}></IonIcon>
-      </IonButton>
-
-      <IonLabel id='text'>¿Ya tienes una cuenta?</IonLabel>
       
       
       </IonContent>

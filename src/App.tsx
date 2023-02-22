@@ -28,6 +28,9 @@ import Perfil from './pages/Perfil';
 import Mensajes from './pages/Mensajes';
 import Registro from './pages/Registro';
 import InicioSesion from './pages/InicioSesion';
+import Home from './pages/Home';
+import Categorias from './pages/Categorias';
+import ResetPass from './pages/ResetPass';
 
 setupIonicReact();
 
@@ -38,8 +41,19 @@ const App: React.FC = () => {
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
+          <Route exact path="/">
+            <Home/>
+          </Route>
+
+          <Route exact path="/ResetPass">
+            <ResetPass/>
+          </Route>
         <Route exact path="/InicioSesion">
             <InicioSesion/>
+          </Route>
+
+          <Route exact path="/Categorias">
+            <Categorias/>
           </Route>
 
           <Route exact path="/Registro">

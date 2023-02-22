@@ -12,6 +12,9 @@ function InicioSesion () {
   const[username,setUsername]=useState('');
   const[password,setPassword]=useState('');
 
+  function PantallaPrincipal(){
+    window.open("/Categorias","_self");
+  }
   const [toast] = useIonToast()
 
   const iniciarGoogle=async()=>{
@@ -20,6 +23,7 @@ function InicioSesion () {
       const googleProvider=new GoogleAuthProvider();
       await signInWithPopup(auth,googleProvider);
       toast("Inicio de sesión correcto.",2000)
+      PantallaPrincipal();
     }catch(error){
       return false
     }
@@ -35,6 +39,9 @@ function InicioSesion () {
     setBusy(false)
   }
 
+  function resetPass(){
+    window.open("/ResetPass","_self");
+  }
   return (
     <IonPage  id='contenido'>
       <IonHeader>
@@ -64,6 +71,10 @@ function InicioSesion () {
         <IonIcon slot="end" icon={lockOpenOutline}></IonIcon>
       </IonButton>
 
+      <IonButton id='botones' onClick={resetPass}>
+        He olvidado mi contraseña 
+        <IonIcon slot="end" icon={lockOpenOutline}></IonIcon>
+      </IonButton>
 
       <IonButton color="danger" id='botones' onClick={iniciarGoogle}>
         Iniciar con Google
